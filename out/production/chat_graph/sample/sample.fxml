@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox blendMode="MULTIPLY" depthTest="DISABLE" styleClass="bodybg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <TextArea fx:id="userListTextArea" blendMode="MULTIPLY" depthTest="DISABLE" editable="false" prefHeight="480" prefWidth="180" />
+   <VBox alignment="center" prefHeight="480" prefWidth="540" styleClass="bodybg" stylesheets="@style.css">
+      <children>
+         <TextArea fx:id="textArea" blendMode="MULTIPLY" depthTest="DISABLE" editable="false" prefHeight="455" prefWidth="540" styleClass="bodybg" stylesheets="@style.css">
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor></TextArea>
+         <HBox prefHeight="25" prefWidth="300" styleClass="bodybg" stylesheets="@style.css">
+            <children>
+               <TextField fx:id="textField" depthTest="ENABLE" editable="false" onAction="#send" prefWidth="465" text="Подключитесь к серверу для общения">
+                  <cursor>
+                     <Cursor fx:constant="TEXT" />
+                  </cursor>
+                  <opaqueInsets>
+                     <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                  </opaqueInsets></TextField>
+               <Button mnemonicParsing="false" onAction="#send" prefWidth="75" style="-fx-background-color: skyblue;" text="Send" textAlignment="CENTER" textFill="#393838" textOverrun="CLIP" underline="true">
+                  <font>
+                     <Font name="JetBrains Mono ExtraLight" size="11.0" />
+                  </font></Button>
+            </children>
+         </HBox>
+         <Button fx:id="connectBtn" onAction="#connect" prefHeight="25" prefWidth="Infinity" text="Подключиться" />
+      </children>
+   </VBox>
+
+</HBox>
